@@ -1,0 +1,32 @@
+###
+GET http://localhost:8090/test
+
+###
+POST http://localhost:8090/club
+Content-Type: application/json
+Accept: */*
+Connection: keep-alive
+
+{"name":"JavaTravelClub","intro":"Travel club to the Java island."}
+
+###
+GET http://localhost:8090/club/all
+Content-Type: application/json
+
+###
+GET http://localhost:8090/club/88ae1a60-0233-4d6b-af21-f4176a64c2a2
+Content-Type: application/json
+
+###
+GET http://localhost:8090/club?name=JavaTravelClub
+Content-Type: application/json
+
+###
+PUT http://localhost:8090/club/88ae1a60-0233-4d6b-af21-f4176a64c2a2
+Content-Type: application/json
+
+{"nameValues":[{"name":"name","value":"Change Club name22~~"},{"name":"intro","value":"Change Club intro22~~"}]}
+
+###
+DELETE http://localhost:8090/club/98fb642f-0bfc-41c1-a439-66e65041afe4
+Content-Type: application/json
